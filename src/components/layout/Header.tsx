@@ -11,20 +11,12 @@ export const Header = () => {
       <div className="max-w-screen-xl h-full flex items-center justify-between mx-auto my-0 px-20 py-0 max-md:px-10 max-md:py-0 max-sm:px-5 max-sm:py-0">
         <Logo />
         
-        {/* Mobile Menu Button */}
-        <button 
-          className="hidden max-sm:flex items-center"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
         {/* Desktop Navigation */}
-        <div className="flex items-center gap-8 max-sm:hidden">
+        <div className="flex-1 flex items-center justify-center max-sm:hidden">
           <nav className="flex gap-8">
             <a
               href="#"
-              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s]"
+              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s] hover:text-[#008000]"
             >
               Home
             </a>
@@ -36,23 +28,35 @@ export const Header = () => {
             </a>
             <a
               href="#"
-              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s]"
+              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s] hover:text-[#008000]"
             >
               Pricing
             </a>
             <a
               href="#"
-              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s]"
+              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s] hover:text-[#008000]"
             >
               About
             </a>
             <a
               href="#"
-              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s]"
+              className="text-base text-gray-600 no-underline transition-[color] duration-[0.2s] hover:text-[#008000]"
             >
               Contact
             </a>
           </nav>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="hidden max-sm:flex items-center"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Login/Sign Up Button */}
+        <div className="flex items-center max-sm:hidden">
           <button className="flex items-center gap-2 text-white text-base cursor-pointer shadow-[0px_1px_2px_rgba(0,0,0,0.05)] bg-[#008000] px-4 py-[11px] rounded-lg">
             <svg
               width="14"
